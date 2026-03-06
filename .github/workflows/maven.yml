@@ -17,5 +17,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run Tests with Maven
-      # This runs your tests in "Headless" mode (no physical window)
       run: mvn clean test
+      continue-on-error: true
+
+    - name: Upload Cucumber Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: cucumber-reports
+        path: target/cucumber-reports.html
