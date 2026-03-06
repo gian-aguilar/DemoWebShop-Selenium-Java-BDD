@@ -19,7 +19,7 @@ public class BasePage {
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		Properties prop = ConfigReader.initializeProperties();
-		int timeout = Integer.parseInt(prop.getProperty("timeout", "15"));
+		int timeout = Integer.parseInt(prop.getProperty("timeout", "20"));
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
 	}
 

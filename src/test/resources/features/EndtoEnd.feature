@@ -1,6 +1,6 @@
 Feature: Happy Path
 
-@HappyPath
+  @HappyPath
   Scenario Outline: Valid user buys Blue Jeans and Logs out
     Given I am on the demo web shop login page
     When I enter "<username>" and "<password>"

@@ -9,10 +9,10 @@ public class SearchPage extends BasePage {
 		super(driver);
 	}
 
-	private By clickProduct = By.xpath("//h2[@class='product-title']//a[text()='Blue Jeans']");
+	private By bluJeansProduct = By.xpath("//h2[@class='product-title']//a[text()='Blue Jeans']");
 
 	public void clickProduct() {
-		click(clickProduct);
+		click(bluJeansProduct);
 	}
 
 }
