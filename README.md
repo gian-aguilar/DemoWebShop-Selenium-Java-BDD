@@ -1,4 +1,5 @@
-﻿# DemoWebShop Selenium Java BDD Automation Framework
+﻿
+# DemoWebShop Selenium Java BDD Automation Framework
 ![Build Status](https://github.com/gian-aguilar/DemoWebShop-Selenium-Java-BDD/actions/workflows/maven.yml/badge.svg)
  
 
@@ -14,13 +15,19 @@ https://demowebshop.tricentis.com/
   
 ## Tech Stack  
   
-- Java  
-- Selenium WebDriver  
-- Cucumber BDD  
-- Maven  
-- JUnit  
-- Git  
-- GitHub Actions (CI/CD)  
+-   **Language:** Java 17+
+    
+-   **Automation Tool:** Selenium WebDriver 4
+    
+-   **BDD Framework:** Cucumber (Gherkin)
+    
+-   **Build Tool:** Maven
+    
+-   **Test Runner:** JUnit 4
+    
+-   **Design Pattern:** Page Object Model (POM)
+    
+-   **CI/CD:** GitHub Actions
   
 ---  
   
@@ -43,34 +50,23 @@ Project structure:
 │   └── config.properties 
 ```
 
-  
-Key components:  
-  
-Page Objects 
-Encapsulates web element locators and page actions.  
-  
-Step Definitions   
-Maps Cucumber feature steps to automation code.  
-  
-Feature Files   
-BDD scenarios written in Gherkin language.  
-  
-Test Runner   
-Executes test scenarios using Cucumber and JUnit.  
-  
+   
 ---  
   
-## Sample Automated Scenarios  
+## Test Coverage  
   
-The following functional scenarios are automated:  
-  
-- User login with valid credentials  
-- User login with invalid credentials  
-- Search product catalog  
-- Add product to shopping cart  
-- Checkout cart contents
-- User logout  
-  
+The framework covers the following functional scenarios, mapped to specific Cucumber tags for targeted execution:  
+
+| Feature Area | Automated Scenario | Tag |
+| :--- | :--- | :--- |
+| **Authentication** | Valid Login | `@Login` |
+| **Authentication** | Login with Invalid Credentials | `@Invalid_Login` |
+| **Search** | Product Catalog Discovery | `@Search` |
+| **Shopping Cart** | Add Product to Cart | `@AddToCart` |
+| **Checkout** | Check out product | `@Checkout` |
+| **Log out** | Log out to demo site | `@Logout` |
+| **End to End** | Complete Purchase Journey (Login to Checkout) | `@EndtoEnd` |
+
 ---  
   
 
@@ -109,12 +105,12 @@ mvn test -Dcucumber.filter.tags="@EndtoEnd"
   
 This project uses **GitHub Actions** to automatically run automation tests whenever code is pushed to the repository.  
   
-CI workflow includes:  
-  
-- Project build  
-- Dependency installation  
-- Test execution using Maven  
-- Automated validation of test scenarios  
+
+-   **Trigger:** Every `push` or `pull_request` to the `main` branch.
+    
+-   **Environment:** Runs on `ubuntu-latest` using **Chrome Headless** mode.
+    
+-   **Artifacts:** Cucumber HTML reports are generated and stored in the "Actions" summary after every run.
   
 Workflow configuration can be found here:  
 
