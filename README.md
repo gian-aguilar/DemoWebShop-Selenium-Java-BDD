@@ -1,4 +1,8 @@
-﻿
+# DemoWebShop Selenium BDD Framework
+
+![Build Status](https://github.com/gian-aguilar/DemoWebShop-Selenium-Java-BDD/actions/workflows/maven.yml/badge.svg)
+
+This is a Selenium-Java-Cucumber automation framework running on GitHub Actions.﻿
 # Demo Web Shop - E2E Automation Framework
 
 ## Project Overview
