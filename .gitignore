@@ -12,8 +12,25 @@ target/
 .idea/
 *.iml
 .vscode/
+.factorypath
+bin/
+
+# Selenium / Driver Logs
+chromedriver.log
+geckodriver.log
+ghostdriver.log
+webdriver-py.log
+
+# Crash dumps and temp files
+hs_err_pid*
+reply_dump*
+*.tmp
 
 # Logs and Reports
 test-output/
 build/
 *.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
