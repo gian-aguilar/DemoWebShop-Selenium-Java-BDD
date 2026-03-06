@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
         "html:target/cucumber-reports.html", 
         "json:target/cucumber.json"
     },
-    tags = "@HappyPath",
+    tags = "",
     monochrome = true
 )
 

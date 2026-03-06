@@ -16,8 +16,9 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
+
     - name: Run Tests with Maven
-      run: mvn clean test
+      run: mvn clean test -Dbrowser=chrome
       continue-on-error: true
 
     - name: Upload Cucumber Report

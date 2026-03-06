@@ -1,6 +1,6 @@
 Feature: Demo Web Shop Login
 
-  @Valid_Login
+  @Login
   Scenario Outline: Successful Login into Demo Web Shop
     Given I am on the demo web shop login page
     When I enter "<username>" and "<password>"

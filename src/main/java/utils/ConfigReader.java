@@ -11,6 +11,7 @@ public class ConfigReader {
             prop.load(ip);
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("LOG: config.properties not found, using System properties or defaults.");
         }
         return prop;
     }

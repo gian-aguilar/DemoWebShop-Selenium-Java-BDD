@@ -1,5 +1,5 @@
 # Sensitive Data
-src/test/resources/config.properties
+#src/test/resources/config.properties
 
 # Compiled Java classes
 target/

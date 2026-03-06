@@ -14,7 +14,13 @@ public class DriverFactory {
 
     public static WebDriver getDriver() {
         Properties prop = ConfigReader.initializeProperties();
-        String browserName = prop.getProperty("browser");
+        String browserName = System.getProperty("browser") != null 
+                ? System.getProperty("browser") 
+                : prop.getProperty("browser");
+        
+        if (browserName == null) {
+            browserName = "chrome";
+        }
 
         if (driver == null) {
             if (browserName.equalsIgnoreCase("chrome")) {
