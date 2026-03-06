@@ -34,7 +34,7 @@ The framework simulates real user behavior, covering critical business flows suc
 ----------
 
 
-## 🚀 How to Run Tests
+## How to Run Tests
 
 1.  **Prepare Test Data:** Open `src/test/resources/features/EndtoEnd.feature` and ensure the `Examples:` table contains the valid **username** and **password** for the Demo Web Shop.
     
@@ -59,7 +59,7 @@ The framework simulates real user behavior, covering critical business flows suc
 │   ├── hooks           # Global Setup/Teardown
 │   ├── pages           # Page Object Model (BasePage & Page Classes)
 │   ├── stepdefinitions # Glue code connecting Gherkin to Java
-│   └── runners         # Cucumber JUnit Test Runner
+│   └── testrunner         # Cucumber JUnit Test Runner
 ├── src/test/resources
 │   ├── features        # BDD Scenarios
 │   └── config.properties # Global settings (URL, Browser, Timeout)
