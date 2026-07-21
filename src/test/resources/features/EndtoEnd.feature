@@ -9,6 +9,7 @@ Feature: Happy Path
     When I search for "<productname>"
     And I click on the product "<productname>"
     When I click the Add to cart button for "<productname>"
+    Then a success message contains "The product has been added to your " should appear
     And I go to shopping cart
     When I proceed to check process
     Then a confirmation message contains "Your order has been successfully processed!" should display

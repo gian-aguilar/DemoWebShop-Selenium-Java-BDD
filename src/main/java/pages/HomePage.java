@@ -18,6 +18,7 @@ public class HomePage extends BasePage {
 
 	// Shopping Cart
 	private By shoppingCartlink = By.xpath("//span[contains(text(),'Shopping cart')]");
+	private By cartQtySpan = By.cssSelector("span.cart-qty");
 
 	// method
 	public void clickLogin() {
@@ -34,6 +35,10 @@ public class HomePage extends BasePage {
 
 	public void clickShoppingCartlink() {
 		click(shoppingCartlink);
+	}
+	
+	public String getCartQtySpan() {
+		return getText(cartQtySpan);
 	}
 	
 	public void clickLogout() {

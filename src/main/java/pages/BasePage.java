@@ -26,6 +26,17 @@ public class BasePage {
 	protected void click(By locator) {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+		
+		/*int attempts = 0;
+		while(attempts < 3)
+			try {
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		element.click();
+		break;
+			} catch (org.openqa.selenium.StaleElementReferenceException | org.openqa.selenium.ElementClickInterceptedException e) {
+				attempts++;
+				if (attempts == 3) throw e;
+			} */
 	}
 
 	protected void type(By locator, String text) {
@@ -45,5 +56,10 @@ public class BasePage {
 	protected String getText(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
     }
+	
+	/*protected void waitForPageLoaded() {
+		wait.until(webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}*/
 
 }

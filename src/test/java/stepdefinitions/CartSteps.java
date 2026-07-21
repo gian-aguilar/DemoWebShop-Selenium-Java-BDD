@@ -65,6 +65,14 @@ public class CartSteps {
 
 	@And("I go to shopping cart")
 	public void I_go_to_shopping_cart() {
+		String rawQtyText = homePage.getCartQtySpan();
+		String cleanQtyText = rawQtyText.replaceAll("[()]", "").trim();
+		int cartQuantity = Integer.parseInt(cleanQtyText);
+		//int productQuantity = Integer.parseInt(productPage.getProductQuantity());
+		if (cartQuantity <= 0)
+		System.out.println("Error: Quantity mismatch");
+		else
+			System.out.println("==Cart has value==");
 		homePage.clickShoppingCartlink();
 	}
 
