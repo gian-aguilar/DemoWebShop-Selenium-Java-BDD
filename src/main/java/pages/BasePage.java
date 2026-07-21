@@ -57,9 +57,17 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
     }
 	
-	/*protected void waitForPageLoaded() {
+	protected void waitForPageLoaded() {
 		wait.until(webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-	}*/
-
+		}
+	
+	protected void waitForNotificationToDisappear() {
+		try {
+			By notificationBar = By.id("bar-notification");
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(notificationBar));
+		} catch (Exception e) {
+			
+		}
+	}
 }

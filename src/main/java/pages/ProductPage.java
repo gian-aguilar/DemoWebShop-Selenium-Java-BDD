@@ -29,5 +29,4 @@ public class ProductPage extends BasePage {
 	public String getProductQuantity() {
 		return driver.findElement(quantityInput).getAttribute("value");
 	}
-
 }

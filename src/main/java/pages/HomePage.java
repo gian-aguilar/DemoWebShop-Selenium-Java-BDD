@@ -34,6 +34,7 @@ public class HomePage extends BasePage {
 	}
 
 	public void clickShoppingCartlink() {
+		waitForNotificationToDisappear();
 		click(shoppingCartlink);
 	}
 	
